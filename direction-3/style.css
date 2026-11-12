@@ -154,6 +154,8 @@ body {
 				padding-block: var(--space-m);
 				padding-inline: var(--space-m);
 				border: var(--line) solid var(--gray);
+				border-block-start: var(--space-l) solid var(--gray);
+				border-radius: 1rem;
 				overflow-wrap: anywhere;
 
 				& p {
