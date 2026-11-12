@@ -3,6 +3,7 @@
 	--paper: #efeeeb;
 	--black: #1a1a1a;
 	--gray: #777777;
+	--red: #a70000;
 
 	/* FONT */
 	--font-sans: Bebas Neue, Arial;
@@ -26,7 +27,7 @@
 	--space-xl: 6rem;
 
 	/* BORDER */
-	--line: 0.0625rem;
+	--line: 0.1rem;
 }
 
 body {
@@ -160,6 +161,11 @@ body {
 					margin-block-end: var(--space-m);
 				}
 
+				& mark {
+					color: var(--paper);
+					background-color: var(--red);
+				}
+
 				/* FIRST QUOTE */
 				& > .first-bq {
 					margin: 0;
@@ -186,7 +192,7 @@ body {
 
 					padding-inline-start: var(--space-m);
 					border-inline-start:
-						calc(var(--line) * 2) solid var(--gray);
+						calc(var(--line) * 4) solid var(--red);
 
 					& cite {
 						display: block;
