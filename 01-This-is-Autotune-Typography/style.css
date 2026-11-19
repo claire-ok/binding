@@ -271,7 +271,6 @@ body {
 					text-align: center;
 
 					&::before {
-						content: "\201C";
 						display: block;
 						color: var(--point);
 						font-size: calc(var(--text-large)*2.5);
