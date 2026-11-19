@@ -76,8 +76,9 @@ body.landing {
 			margin: 0;
 			margin-block-end: var(--space-l);
 
-			font-size: calc(var(--text-small) * 1.6);
-			font-weight: var(--weight-bold);
+			font-size: var(--text-subtitle);
+			font-family: var(--font-sans);
+			font-weight: calc(var(--weight-bold)*2);
 			line-height: 1.15;
 		}
 
@@ -99,9 +100,7 @@ body.landing {
 
 		& .window {
 			position: relative;
-			/* Establishes a query container for dimensional queries on the inline axis of the container. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/container-type */
-			container-type: inline-size;
-			aspect-ratio: 21 / 20;
+			aspect-ratio: 1 / 1; /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/aspect-ratio */
 			overflow: hidden;
 
 			border-radius: var(--space-s);
@@ -132,7 +131,7 @@ body.landing {
 			display: block;
 			inline-size: 100%;
 			block-size: 100%;
-			object-fit: contain;
+			object-fit: contain; /*https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-fit*/
 		}
 
 		/* READING TITLE AND AUTHOR */
@@ -143,13 +142,13 @@ body.landing {
 			flex-direction: column;
 			justify-content: center;
 
-			padding-inline: 7cqi;
+			padding-inline: var(--space-m);
 			background-color: white;
 
 			& h2 {
 				margin: 0;
 				color: var(--charcoal);
-				font-size: min(calc(var(--text-small) * 4.25), 14cqi);
+				font-size: clamp(var(--text-large),5vw, var(--text-title));
 				font-weight: var(--weight-bold);
 				line-height: 1.12;
 
@@ -159,7 +158,7 @@ body.landing {
 
 				& .title-light {
 					margin-block-end: var(--space-xs);
-					font-size: 0.72em;
+					font-size: var(--text-nav);
 					font-weight: var(--weight-regular);
 				}
 
