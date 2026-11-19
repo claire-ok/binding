@@ -233,28 +233,55 @@ body {
 				/* BLOCKQUOTE */
 				& > .bq {
 					margin-block: var(--space-l);
-
-					padding-block: var(--space-m);
-					border-block: calc(var(--line) * 3) solid var(--black);
-					color: var(--point);
-
-					font-size: var(--text-large);
-					font-style: italic;
-					line-height: 1.3;
 					text-align: center;
 
-					&::before {
-						content: "\201C" ;
-						display: block;
+					& .kicker {
+						display: flex;
+						align-items: center;
+						gap: var(--space-s);
+
+						margin: 0;
 						color: var(--point);
-						font-size: calc(var(--text-large)*2.5);
-						font-size: normal;
-						line-height: 0.6;
-						padding-block-start: var(--space-s);
+						font-family: var(--font-sans);
+						font-size: var(--text-nav);
+						font-weight: var(--weight-bold);
+						line-height: 1.2;
+						text-transform: uppercase;
+					}
+					&::before, &::after {
+						content: "";
+						flex: 1;
+						box-sizing: border-box;
+						block-size: calc(var(--line)*3);
+						border-block: var(--line) solid var(--black);
 					}
 
 					& p {
-						margin-block-end: 0;
+						margin-block: var(--space-m);
+						font-size: var(--text-med);
+						font-weight: var(--weight-bold);
+						line-height: 1.2;
+
+						@media (width > 768px) {
+							font-size: var(--text-large);
+						}
+					}
+
+					&::after {
+						content: "";
+						display: block;
+						box-sizing: border-box;
+						block-size: calc(var(--line) * 3);
+						border-block: var(--line) solid var(--black);
+					}
+
+					& cite {
+						display: block;
+						margin-block-start: var(--space-s);
+						color: var(--gray-dark);
+						font-family: var(--font-sans);
+						font-size: var(--text-nav);
+						font-style: normal;
 					}
 				}
 

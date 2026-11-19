@@ -261,7 +261,8 @@ body {
 					margin-block: var(--space-l);
 
 					padding-block: var(--space-m);
-					border-block: calc(var(--line) * 3) solid var(--black);
+					border-block-end: var(--line) solid var(--black);
+					border-block-start: calc(var(--line) * 3) solid var(--black);
 					color: var(--point);
 
 					font-size: var(--text-large);
