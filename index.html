@@ -2,20 +2,80 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Binding</title>
-		<link href="styles/reset.css" rel="stylesheet">
-		<link href="styles/common.css" rel="stylesheet">
+		<style>
+			@import '../styles/reset.css' layer(reset);
+			@import '../styles/common.css' layer(common);
+			@import 'style.css' layer(page);
+		</style>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 	</head>
-	<body>
-		<h1>Binding</h1>
-		<nav>
-			<ol>
-				<li><a href="../">Home</a></li>
-				<li><a href="../01-This-is-Autotune-Typography/">01</a></li>
-				<li><a href="../02-Typography-Discourse/">02</a></li>
-				<li><a href="../03-The-global-style/">03</a></li>
-				<li><a href="../direction-1/">direction-1</a></li>
-			</ol>
-		</nav>
-		<p>Hello, world! This is landing page.</p>
-	</body>
-</html>
+	<body class="landing">
+	<main>
+		<header class="intro">
+			<h1>When Type Becomes a Style</h1>
+
+			<p>A new way of arranging words and images can change how we read them. But what happens when that experiment becomes a style we see everywhere?</p>
+
+			<p>These three essays follow that question from the page to the gallery wall. McCoy and Frej explore how layout invites readers to interpret a text. Mr. Keedy examines why museums and galleries share a recognizable look. Silvia Sfligiotti zooms in on one familiar choice: setting words in all caps. Read together, the essays ask what happens to the voice of a message when its typography becomes a habit.</p>
+		</header>
+
+		<div class="readings">
+			<div class="window">
+				<div class="window-dots"></div>
+
+				<img class="cover" src="images/landing-preview.png" alt="">
+
+				<div class="preview preview-1">
+					<h2>
+						<span class="title-light">This is</span>
+						<span>Auto - Tune</span>
+						<span><mark>Typography</mark></span>
+					</h2>
+					<p>Silvia Sfligiotti</p>
+				</div>
+
+				<div class="preview preview-2">
+					<h2>
+						<span>Typography</span>
+						<span>as <mark>Discourse</mark></span>
+					</h2>
+					<p>Katherine McCoy and David Frej</p>
+				</div>
+
+				<div class="preview preview-3">
+					<h2>
+						<span class="title-light">The</span>
+						<span>Global <mark>Style</mark></span>
+					</h2>
+					<p>Mr. Keedy</p>
+				</div>
+			</div>
+
+			<nav>
+				<ol>
+					<li>
+						<a class="reading-1" href="../01-This-is-Autotune-Typography/">
+							1<span class="link-title"> — This is Auto-Tune Typography</span>
+						</a>
+					</li>
+					<li>
+						<a class="reading-2" href="../02-Typography-Discourse/">
+							2<span class="link-title"> — Typography as Discourse</span>
+						</a>
+					</li>
+					<li>
+						<a class="reading-3" href="../03-The-global-style/">
+							3<span class="link-title"> — The Global Style</span>
+						</a>
+					</li>
+				</ol>
+			</nav>
+		</div>
+	</main>
+		<footer>
+				<p>Typography & Interaction 2627 &copy; Designed by Claire Ok</p>
+				<!-- <a id="back-to-top" href="#">Top</a> -->
+			</footer>
+</body>
