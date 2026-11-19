@@ -11,6 +11,9 @@
 	--gray: #777777;
 	--gray-dark: #62625e;
 	--gray-light: #a9a9a5;
+	--red: #a70000;
+	--brown: #7e441d;
+	--green: #289540;
 
 	/* FONT SIZE */
 	--text-nav: 0.8rem;
@@ -173,6 +176,98 @@ body.landing {
 				margin-block-start: var(--space-s);
 				font-size: var(--text-small);
 				line-height: 1.3;
+			}
+
+			&.preview-1 {
+				text-align: center;
+
+				& h2 {
+					padding-block: var(--space-m);
+					border-block-start: calc(var(--line) * 3) solid var(--red);
+					border-block-end: var(--line) solid var(--charcoal);
+
+					& .title-light {
+						font-style: italic;
+					}
+
+					& mark {
+						background-color: var(--red);
+						color: var(--paper);
+					}
+				}
+
+				& p {
+					margin-block-start: var(--space-m);
+					font-style: italic;
+				}
+			}
+
+			&.preview-2 {
+				& h2 {
+					padding-inline-start: var(--space-m);
+					border-inline-start: calc(var(--line) * 6) solid var(--brown);
+
+					& mark {
+						background-color: transparent;
+						color: var(--charcoal);
+						text-decoration: underline;
+						text-decoration-color: var(--brown);
+						text-decoration-thickness: calc(var(--line) * 2);
+						text-underline-offset: 0.15em;
+					}
+				}
+
+				& p {
+					padding-inline-start: calc(var(--space-m) + var(--line) * 3);
+					color: var(--gray);
+					font-family: var(--font-sans);
+					font-size: var(--text-nav);
+					font-weight: var(--weight-bold);
+					letter-spacing: 0.14em;
+					text-transform: uppercase;
+
+					&::before {
+						content: "— ";
+					}
+				}
+			}
+
+			&.preview-3 {
+				text-align: center;
+
+				& h2 {
+					&::after {
+						content: "";
+						display: block;
+						box-sizing: border-box;
+						margin-block-start: var(--space-m);
+						block-size: calc(var(--line) * 3);
+						border-block: var(--line) solid var(--charcoal);
+					}
+				}
+
+				& p {
+					order: -1;
+					display: flex;
+					align-items: center;
+					gap: var(--space-s);
+
+					margin-block: 0 var(--space-m);
+					color: var(--green);
+					font-family: var(--font-sans);
+					font-size: var(--text-nav);
+					font-weight: var(--weight-bold);
+					text-transform: uppercase;
+
+					&::before,
+					&::after {
+						content: "";
+						flex: 1;
+						box-sizing: border-box;
+						block-size: calc(var(--line) * 3);
+						border-block: var(--line) solid var(--charcoal);
+					}
+				}
 			}
 		}
 
