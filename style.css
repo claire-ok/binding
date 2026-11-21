@@ -40,11 +40,15 @@
 	--line: 0.07rem;
 }
 
-body.landing {
+body.background {
 	margin: 0;
 	background-color: var(--paper);
-	color: var(--black);
+	background-image: url("img/paper-texture.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 
+	color: var(--black);
 	font-family: var(--font-serif);
 	font-size: var(--text-small);
 	font-weight: var(--weight-regular);
